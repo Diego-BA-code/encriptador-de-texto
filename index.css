@@ -23,14 +23,22 @@ body {
 }
 
 .campo-entrada {
+    background-color: transparent;
     width: 100%;
     height: 70vh;
-    border-radius: 2em;
-    padding: 2em;
+    padding: 1em 0 0 0;
     border: none;
     resize: none;
+    overflow: auto;
+    outline: none;
     box-sizing: border-box;
     font-size: 2em;
+    color: #0A3871;
+}
+
+
+.campo-entrada::placeholder {
+    color: #0A3871;
 }
 
 .aviso-entradas {
@@ -50,6 +58,7 @@ body {
     padding: 2em;
     background-color: #0A3871;
     border-radius: 2em;
+    color: #FFFFFF;
 }
 .btn-desencriptar {
     border: 1px solid #0A3871;
@@ -57,17 +66,19 @@ body {
     padding: 2em;
     background-color: #D8DFE8;
     border-radius: 2em;
+    color: #0A3871;
 }
 
 .bloque-resultado {
     margin-top: 2%;
     width: 30%;
-    height: 100%;
+    height: 100vh;
     display: flex;
   }
 
   .caja-resultado {
-    height:46em;
+    display: flex;
+    height:89.5vh;
     justify-content: center; 
     align-items: center; 
     text-align: center;
@@ -75,21 +86,54 @@ body {
     background-color: #FFFFFF;
     border-radius: 2em;
     padding: 1em;
+    overflow: auto;
   }
 .aviso-sin-contenido {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center; 
     align-items: center; 
 }  
 .imagen-muñeco {
     padding: 1em;
-    width: 100% ;
+    width: 100%;
     max-width: 100%;
 }
-.mensaje-negritas {
+.mensaje-no-encontrado {
     font-size: 2.5em;
     font-weight: bold;
+}
+.texto {
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    width: 100%;
+    border-radius: 2em;
+    padding: 1em;
+}
+
+.resultado {
+    width: 100%;
+    height: 90%;
+    margin: 1em 0 1em 0;
+    border: none;
+    resize: none;
+    overflow: auto;
+    outline: none;
+    font-size: 2em;
+    color: #0A3871;
+}
+
+.btn-copiar {
+    border: 1px solid #0A3871;
+    width: 50%;
+    padding: 2em;
+    background-color: #FFFFFF;
+    border-radius: 2em;
+    color: #0A3871;
 }
 
 .material-symbols--info {

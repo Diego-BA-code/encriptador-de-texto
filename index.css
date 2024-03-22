@@ -14,18 +14,39 @@ body {
 .bloque-menu {
     width: 8%;
     height: 100vh;
+    min-height: 400px;
 }
 
 .bloque-entradas{
-    margin-top: 5%;
+    display: flex;
     width: 50%;
     height: 100vh;
+    min-height: 400px;
 }
+
+.caja-entradas, .caja-resultado {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: center; 
+    text-align: center;
+    width: 100%;
+    border-radius: 2em;
+    padding: 1em;
+}
+.caja-entradas {
+    margin-top: 30px;
+}
+.caja-resultado {
+    background-color: #FFFFFF;
+    height: calc(80% + 30px);
+}
+
 
 .campo-entrada {
     background-color: transparent;
     width: 100%;
-    height: 70vh;
+    height: 100%;
     padding: 1em 0 0 0;
     border: none;
     resize: none;
@@ -49,7 +70,8 @@ body {
 .botones-entrada {
     display: flex;
     justify-content: center;
-    gap: 20%;
+    gap: 2%;
+    width: 100%;
 }
 
 .btn-encriptar {
@@ -70,24 +92,13 @@ body {
 }
 
 .bloque-resultado {
-    margin-top: 2%;
     width: 30%;
     height: 100vh;
+    min-height: 800px;
     display: flex;
   }
 
-  .caja-resultado {
-    display: flex;
-    height:89.5vh;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-    width: 100%;
-    background-color: #FFFFFF;
-    border-radius: 2em;
-    padding: 1em;
-    overflow: auto;
-  }
+
 .aviso-sin-contenido {
     display: none;
     flex-direction: column;
@@ -103,16 +114,14 @@ body {
     font-size: 2.5em;
     font-weight: bold;
 }
-.texto {
+.aviso-resultado {
     display: flex;
     flex-direction: column;
-    height: -webkit-fill-available;
+    height: 100%;
     justify-content: center; 
     align-items: center; 
     text-align: center;
     width: 100%;
-    border-radius: 2em;
-    padding: 1em;
 }
 
 .resultado {
@@ -147,4 +156,82 @@ body {
 
 
 /* media querie para diseño de tablets */
-@media (min-width:801px)  {  }
+@media (max-width: 800px) {  
+
+    .bloque-principal{
+        flex-direction: column;
+    }
+
+    .bloque-menu {
+        min-height: auto;
+        width: 100%;
+        height: 100%;
+    }
+    .bloque-entradas {
+        width: 100%;
+        height: 70vh;
+        margin-bottom: 60px;
+    }
+    .caja-entradas {
+        height: 100%;
+        padding: 0;
+    }
+    .bloque-resultado {
+        width: 100%;
+        min-height: auto;
+        height: 10vh;
+        flex-basis: content;
+    }
+    .caja-resultado {
+        height: 100%;
+        min-height: 100px;
+        padding: 0;
+    }
+    .imagen-muñeco {
+        display: none;
+    }
+    .mensaje-no-encontrado {
+        margin:0;
+    }
+    .aviso-resultado {
+        justify-content: center;
+    }
+    .btn-copiar {
+        margin: auto;
+    }
+}
+
+/* media querie para diseño de móviles */
+@media (max-width: 500px) { 
+    body {
+        font-size: 14px;
+    }
+
+    .bloque-principal {
+        padding: 0.5em;
+    }
+    .bloque-menu {
+        width: 100%;
+        height: 10vh;
+    }
+    .bloque-entradas {
+        margin-bottom: 5%;
+        height: 50vh;
+    } 
+    .botones-entrada {
+        flex-direction: column;
+    }
+    .botones-entrada button {
+        width: 100%;
+        margin-bottom: 5%;
+        padding: 2em;
+    }
+    .bloque-resultado {
+        height: 20vh;
+    }
+    .caja-resultado {
+        margin-top: 20px;
+        height: fit-content;
+        padding: 1em;
+    }
+}

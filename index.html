@@ -19,29 +19,36 @@
         <div class="bloque-entradas">
             <!-- aqui se ingresara el texto que se va a encriptar -->
             <div class="caja-entradas">
-                <textarea placeholder="Ingrese el texto aquí" class="campo-entrada"></textarea>
-                <p class="aviso-entradas"><span class="material-symbols--info"></span>Solo letras minúsculas y sin
+                <textarea placeholder="Ingrese el texto aquí" class="campo-entrada" id="mensaje"></textarea>
+                <p class="aviso-entradas" id="aviso-entradas"><span class="material-symbols--info"></span>Solo letras
+                    minúsculas y sin
                     acentos</p>
                 <div class="botones-entrada">
-                    <button type="button" class="btn-encriptar">Encriptar</button><button type="button"
-                        class="btn-desencriptar">Desencriptar</button>
+                    <button type="button" class="btn-encriptar" onclick="encriptar()">Encriptar</button><button
+                        type="button" class="btn-desencriptar" onclick="desencriptar()">Desencriptar</button>
                 </div>
             </div>
         </div>
         <div class="bloque-resultado">
             <div class="caja-resultado">
-                <div class="aviso-sin-contenido">
+                <div class="aviso-sin-contenido" id="aviso-sin-contenido">
                     <img src="imagenes/Muñeco.png" alt="muñeco-mirando-diamante-con-una lupa" class="imagen-muñeco">
                     <p class="mensaje-no-encontrado">Ningún mensaje fue encontrado</p>
                     <p>Ingresa el texto que desees encriptar o desencriptar.</p>
                 </div>
-                <div class="aviso-resultado">
-                    <textarea class="resultado"></textarea>
+                <div class="aviso-resultado" id="aviso-resultado">
+                    <textarea class="resultado" id="resultado"></textarea>
                     <button type="button" class="btn-copiar">Copiar</button>
                 </div>
             </div>
         </div>
     </div>
+    <footer>
+            <p>Desarrollado por Diego Barba</p>
+            <a href="https://www.linkedin.com/in/diego-barba-tech/"><span class="skill-icons--linkedin"></span></a>
+            <a href="https://github.com/Diego-BA-code"><span class="mdi--github"></span></a>
+    </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>

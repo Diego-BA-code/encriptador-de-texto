@@ -18,7 +18,7 @@ function verificarCaracteres(texto, resultado) {
         }, 500);
         return;
     }
-    if (!/^[a-z\s]+$/.test(texto)) {
+    if (!/^[a-z\s¿?¡!]+$/.test(texto)) {
         // Si tiene mayúsculas se cambia el background del aviso a rojo
         avisoEntradas.style.backgroundColor = "red";
         avisoEntradas.style.transition = "1s";
@@ -37,15 +37,40 @@ function encriptar() {
     // Obtener el valor de entrada
     let textoSinEncriptar = mensaje.value;
     // Remplazar ciertos caracteres del mensaje
-    let resultado = textoSinEncriptar.replace(/e/g, 'enter').replace(/i/g, 'imes').replace(/a/g, 'ai').replace(/o/g, 'ober').replace(/u/g, 'ufat');
-    // Si ingresa mayúsculas se resalta el aviso y no se procesa su mensaje
+    let resultado = textoSinEncriptar;
+
+    const remplazos = [
+        { search: 'a', replace: 'ai' },
+        { search: 'e', replace: 'enter' },
+        { search: 'i', replace: 'imes' },
+        { search: 'o', replace: 'ober' },
+        { search: 'u', replace: 'ufat' }
+    ];
+
+    for (let i = 0; i < remplazos.length; i++) {
+        resultado = resultado.replace(new RegExp(remplazos[i].search, 'g'), remplazos[i].replace);
+    }
+
     verificarCaracteres(textoSinEncriptar, resultado);
 }
 
 function desencriptar() {
     //obtener el valor del texto encriptado
     let textoEncriptado = mensaje.value;
-    let resultado = textoEncriptado.replace(/imes/g, 'i').replace(/u/g, 'ufat').replace(/enter/g, 'e').replace(/ai/g, 'a').replace(/ober/g, 'o');
+    let resultado = textoEncriptado;
+
+    const remplazos = [
+        { search: 'ai', replace: 'a' },
+        { search: 'enter', replace: 'e' },
+        { search: 'imes', replace: 'i' },
+        { search: 'ober', replace: 'o' },
+        { search: 'ufat', replace: 'u' }
+    ];
+
+    for (let i = 0; i < remplazos.length; i++) {
+        resultado = resultado.replace(new RegExp(remplazos[i].search, 'g'), remplazos[i].replace);
+    }
+
     verificarCaracteres(textoEncriptado, resultado);
 }
 

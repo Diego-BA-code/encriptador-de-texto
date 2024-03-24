@@ -1,9 +1,9 @@
 
-<div style = "text-align: center"><img src= "img/ONE.png"/></div><br>
+<div style = "text-align: center"><img src= "info_proyecto/ONE.png"/></div><br>
 
 <h1>Encriptador de texto 👾</h1><br>
 
-<img src= "img/encriptador_escritorio.png"/><br>
+<img src= "info_proyecto/encriptador_escritorio.png"/><br>
 <h3 style = "text-align: center"><a>Demo</a></h3>
 <h2>Sobre el proyecto 💻</h2>
 Es una pagina que fue propuesta por Alura en el programa de Oracle Next Education, en donde se ponen a prueba nuestras habilidades adquiridas durante esta etapa del programa. Logrando asi desarrollar un sitio web responsivo e interactivo que se baso en un modelo de Figma.

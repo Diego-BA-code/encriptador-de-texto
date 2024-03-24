@@ -4,7 +4,7 @@
 <h1>Encriptador de texto 👾</h1><br>
 
 <img src= "info_proyecto/encriptador_escritorio.png"/><br>
-<h3 align="center">Demo: https://github.com/Diego-BA-code</h3>
+<h3 align="center">Demo: https://diego-ba-code.github.io/encriptador-de-texto/</h3>
 <h2>Sobre el proyecto 💻</h2>
 Es una pagina que fue propuesta por Alura en el programa de Oracle Next Education, en donde se ponen a prueba nuestras habilidades adquiridas durante esta etapa del programa. Logrando asi desarrollar un sitio web responsivo e interactivo que se baso en un modelo de Figma.
 <h2>¿Qué hace? 😺</h2>
